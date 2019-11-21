@@ -33,11 +33,11 @@ namespace BlazingShop.Services
         }
         public bool UpdateCategory(Category objCategory)
         {
-            Category existingCategory = _db.Categories.FirstOrDefault(c => c.Id == objCategory.Id);
+            Category ExistingCategory = _db.Categories.FirstOrDefault(c => c.Id == objCategory.Id);
 
-            if(existingCategory != null)
+            if(ExistingCategory != null)
             {
-                existingCategory.Name = objCategory.Name;
+                ExistingCategory.Name = objCategory.Name;
                 _db.SaveChanges();
             }
             else
